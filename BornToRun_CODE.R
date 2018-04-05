@@ -47,7 +47,7 @@ site<-"KP"
 ###Smaller values will run faster, but with reduced accuracy. For accuracy, at least 1000
 ###is recommended.
 
-gof_number<-10
+gof_number<-1000
 
 
 
