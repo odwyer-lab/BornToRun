@@ -12,7 +12,7 @@
 ##Data set input (by default must be a tab delimited file: see associated
 ###README for specific formatting instructions). Simply specify path to file in quotes.
 
-FullFIDdataset<-read.delim("~/R/R files/BornToRun_DATA.txt")
+FullFIDdataset<-read.delim("~/GitHub/BornToRun/BornToRun_DATA.txt")
 
 attach(FullFIDdataset)
 
@@ -47,7 +47,7 @@ site<-"KP"
 ###Smaller values will run faster, but with reduced accuracy. For accuracy, at least 1000
 ###is recommended.
 
-gof_number<-1000
+gof_number<-10
 
 
 
@@ -60,13 +60,21 @@ library("rootSolve")
 #for handling hypergeometric functions
 library("hypergeo")
 #for extending the functionality of base beta functions in R
-library("ExtDist")
+#library("ExtDist")
 #numerical differentiation
 library("numDeriv")
 #for optimization
 library("optimx")
 #gnu scientific library
 library("gsl")
+
+rBeta <- function(n, shape1=2, shape2 =3, params = list(shape1, shape2),...){
+  if(!missing(params)){
+    shape1 <- params$shape1
+    shape2 <- params$shape2
+  }
+  rbeta(n, shape1 = shape1, shape2 = shape2)
+}
 
 ###Digits to be reported
 options(digits=10)
@@ -452,7 +460,7 @@ for(j in 1:gof_number){
     ###FIDs calculated based on observed AD and ANGLE and randomnly generated H based on fitted H distribution
     h<-rBeta(1,shape1=p1,shape2=q1)
 
-    randomFID<-FID1(fullset$FullAD[i],fullset$FullRADIANS[i],h)
+    randomFID<-suppressWarnings(FID1(fullset$FullAD[i],fullset$FullRADIANS[i],h))
 
     ###if statement sorts non-flight cased into seperate sets
     if(randomFID <= 0){
