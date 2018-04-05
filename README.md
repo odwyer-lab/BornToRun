@@ -1,4 +1,4 @@
-####"Born to run? Quantifying the balance of prior bias and new information in prey escape decisions"
+#### "Born to run? Quantifying the balance of prior bias and new information in prey escape decisions"
 
 Sutton, NM and JP O'Dwyer
 
@@ -6,7 +6,7 @@ Sutton, NM and JP O'Dwyer
 
 This readme file describes the data files and R script accompanying the above publication. For further questions please contact nmsutto2@illinois.edu
 
-##Data file: "BornToRun_DATA.txt"
+## Data file: "BornToRun_DATA.txt"
 
 Tab delimited text file containing angle of approach (in both degrees and radians), flight-initiation distances (meters), alert distances (meters), and site for human approaches with white-tailed deer. For use with our R script, header names must not be changed (i.e. when using your own data, please use the same headings we have).
 
@@ -22,7 +22,7 @@ Key for headings:
 
 **Site**: site/population where deer were encountered
 
-##R script: "BornToRun_CODE.r"
+## R script: "BornToRun_CODE.r"
 
 R script for inferring prey prior distirbutions, analyzing goodness of fit of models, and comparing models based off of different decision mechanisms/risk factors. Steps for running the script and explanation of outputs are as follows:
 
@@ -49,7 +49,7 @@ R script for inferring prey prior distirbutions, analyzing goodness of fit of mo
 
 *Step 6*: After setting a value in step 5, the code is ready to run, and the entire script may be sourced.
 
-##Description of outputs
+## Description of outputs
 
 Following is a copy of the outputs of one run of this script, with annotations added for explanation:
 
