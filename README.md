@@ -1,4 +1,4 @@
-#### "Born to run? Quantifying the balance of prior bias and new information in prey escape decisions"
+## "Born to run? Quantifying the balance of prior bias and new information in prey escape decisions"
 
 Sutton, NM and JP O'Dwyer
 
